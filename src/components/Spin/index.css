@@ -1,0 +1,18 @@
+.ac-spin {
+  width: 30px;
+  height: 30px;
+  animation: circle infinite 0.75s linear;
+  border: 2px solid var(--text-color);
+  border-radius: 100%;
+  border-top-color: transparent;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
