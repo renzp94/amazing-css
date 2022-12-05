@@ -1,16 +1,17 @@
 import DarkIcon from '@/assets/icons/dark.svg'
 import LightIcon from '@/assets/icons/light.svg'
 import { themeState, useAtom } from '@/store'
-import './index.css'
+import styles from './index.module.less'
 
 const Header = () => {
   const [theme, setTheme] = useAtom(themeState)
+
   return (
-    <header className="layout-header">
+    <header className={styles.layoutHeader}>
       {theme === 'dark' ? (
-        <img className="theme-icon" src={DarkIcon} onClick={() => setTheme('light')} />
+        <img className={styles.themeIcon} src={DarkIcon} onClick={() => setTheme('light')} />
       ) : (
-        <img className="theme-icon" src={LightIcon} onClick={() => setTheme('dark')} />
+        <img className={styles.themeIcon} src={LightIcon} onClick={() => setTheme('dark')} />
       )}
     </header>
   )
